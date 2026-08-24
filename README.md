@@ -3,24 +3,24 @@ provide a program to use to encrypt et decode a message for counter chat control
 
 # FileCrypto (AES-256)
 
-Un outil de chiffrement de texte ultra-sécurité, léger et autonome écrit en Python. Il permet de chiffrer et déchiffrer des messages directement dans un fichier texte local, sans passer par aucun serveur distant.
+A lightweight, standalone, and highly secure text encryption tool written in Python. It allows you to encrypt and decrypt messages directly inside a local text file without relying on any external or third-party servers.
 
-Projet conçu pour garantir une confidentialité totale des échanges (protection contre la surveillance de masse / Chat Control).
-
----
-
-## Fonctionnalités
-
-* **Chiffrement AES-256-GCM :** Standard militaire mondial. Authentification du message incluse (détecte toute modification du texte).
-* **Protection par Seed / Mot de passe :** La clé de dérivation `PBKDF2HMAC` (600 000 itérations) rend les attaques par force brute virtuellement impossibles.
-* **In-Place File Processing :** Le programme lit, chiffre (ou déchiffre) et remplace le contenu directement dans le fichier `.txt`.
-* **Sécurité dynamique :** Un sel (*salt*) et un *nonce* aléatoires sont générés à chaque exécution. Deux chiffrements du même texte produisent deux résultats totalement différents (aucune possibilité de repérer des motifs ou *patterns*).
+Designed to ensure complete communication privacy against mass surveillance and automated scanning.
 
 ---
 
-## Prérequis
+## Features
 
-Installez la bibliothèque cryptographique officielle :
+* **AES-256-GCM Encryption:** World military standard. Includes message authentication to detect any tampering or data corruption.
+* **Seed / Password Protection:** Key derivation via `PBKDF2HMAC` (600,000 iterations) makes brute-force attacks computationally infeasible.
+* **In-Place File Processing:** The script reads, encrypts (or decrypts), and replaces content directly inside the `.txt` file.
+* **Dynamic Security:** A fresh random salt and nonce are generated on every run. Encrypting the exact same text twice produces completely different outputs, preventing pattern recognition.
+
+---
+
+## Prerequisites
+
+Install the official Python cryptography library:
 
 ```bash
 pip install cryptography
