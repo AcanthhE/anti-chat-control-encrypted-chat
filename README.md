@@ -3,7 +3,7 @@ provide a program to use to encrypt et decode a message for counter chat control
 
 # FileCrypto (AES-256)
 
-A lightweight, standalone, and highly secure text encryption tool written in Python. It allows you to encrypt and decrypt messages directly inside a local text file without relying on any external or third-party servers.
+A lightweight and highly secure text encryption tool written in Python. It allows you to encrypt and decrypt messages directly inside a local text file without relying on any external or third-party servers.
 
 Designed to ensure complete communication privacy against mass surveillance and automated scanning.
 
@@ -51,7 +51,7 @@ Bash
 
 Is it truly unbreakable?
 
-Yes. Unlike legacy ciphers (Caesar, basic XOR) or common misconceptions regarding AI analysis:
+Yes. Unlike legacy ciphers (Caesar, basic XOR) or common misconceptions:
 
   Zero Patterns: The encrypted output is indistinguishable from mathematical white noise.
   Text Length: Whether your message is 3 words or 50 pages long, security remains at maximum strength.
