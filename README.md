@@ -27,10 +27,15 @@ A small, fully offline desktop app to encrypt and decrypt text messages using **
 ## Project Structure
 
 ```text
+
 .
-├── crypto_app.py        # Graphical interface + core crypto logic
-├── script.py            # Standalone CLI / text-file script
-├── requirements.txt     # Python dependencies
-├── Makefile             # Automation shortcuts (install / run / build)
-├── CLI_GUIDE.md         # Dedicated documentation for the CLI tool
+├── prim v1/
+│   ├── README.md
+│   ├── script.py          # Standalone CLI / text-file script
+│   └── secret.txt
+├── utils/
+│   ├── Makefile           # Automation shortcuts (install / run / build)
+│   ├── README.md          # Dedicated documentation for the CLI tool
+│   ├── crypto_app.py      # Graphical interface + core crypto logic
+│   └── requirements.txt   # Python dependencies
 └── README.md
