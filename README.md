@@ -7,59 +7,30 @@ A lightweight and highly secure text encryption tool written in Python. It allow
 
 Designed to ensure complete communication privacy against mass surveillance and automated scanning.
 
----
+# Local Encrypted Message Tool
+
+A small, fully offline desktop app to encrypt and decrypt text messages using **AES-256-GCM** with a password-derived key. Designed to ensure complete communication privacy against mass surveillance and automated scanning without relying on external servers, telemetry, or network calls.
+
+![Python](https://img.shields.io/badge/python-3.9%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
 
 ## Features
 
-* **AES-256-GCM Encryption:** World military standard. Includes message authentication to detect any tampering or data corruption.
-* **Seed / Password Protection:** Key derivation via `PBKDF2HMAC` (600,000 iterations) makes brute-force attacks computationally infeasible.
-* **In-Place File Processing:** The script reads, encrypts (or decrypts), and replaces content directly inside the `.txt` file.
-* **Dynamic Security:** A fresh random salt and nonce are generated on every run. Encrypting the exact same text twice produces completely different outputs, preventing pattern recognition.
+- **AES-256-GCM encryption:** World military standard with message authentication (tamper detection).
+- **PBKDF2HMAC key derivation:** (600,000 iterations) makes brute-forcing computationally infeasible.
+- **Dynamic security:** Fresh random salt and nonce on every run. Encrypting the exact same text twice produces completely different outputs.
+- **Graphical Interface (GUI):** Simple, responsive dark-themed window with zero hidden controls.
+- **CLI / File-based Processing:** Native compatibility with raw `.txt` file processing (`MODE:` / `CLE:` / `MESSAGE:` format).
+- **Standalone executable:** Can be compiled into a portable single-file application.
 
----
+## Project Structure
 
-### Instructions & Usage
-1. Create the Input File (message.txt)
-
-Create a text file structured as follows:
-
-```
-MODE: true
-CLE: YourUniqueSeedOrPassword
-MESSAGE:
-Write your confidential message here...
-```
-
-* MODE: true -> Set to encrypt the text.
-* MODE: false -> Set to decrypt the text.
-* CLE: Your secret key/seed (shared only between you and the recipient).
-* MESSAGE: The payload to process.
-
-2. Run the Script
-
-Execute the script by passing your text file as an argument:
-Bash
-
-`python script.py message.txt`
-
-3. Execution Result
-
-    The message.txt file is modified directly in place.
-    The raw message is replaced by a Base64-encoded encrypted string.
-    MODE automatically toggles to false to prepare for subsequent decryption.
-    To decrypt: Run the exact same command (python script.py message.txt) again.
-
-Is it truly unbreakable?
-
-Yes. Unlike legacy ciphers (Caesar, basic XOR) or common misconceptions:
-
-  Zero Patterns: The encrypted output is indistinguishable from mathematical white noise.
-  Text Length: Whether your message is 3 words or 50 pages long, security remains at maximum strength.
-  Cracking: Without the exact key, cracking the cipher would take billions of years using current supercomputers.
-
-## Prerequisites
-
-Install the official Python cryptography library:
-
-```bash
-pip install cryptography
+```text
+.
+├── crypto_app.py        # Graphical interface + core crypto logic
+├── script.py            # Standalone CLI / text-file script
+├── requirements.txt     # Python dependencies
+├── Makefile             # Automation shortcuts (install / run / build)
+├── CLI_GUIDE.md         # Dedicated documentation for the CLI tool
+└── README.md
