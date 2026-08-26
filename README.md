@@ -1,5 +1,5 @@
 # Anti-chat-control-encrypted-chat (made by AcanthE 🇫🇷)
-provide a program to use to encrypt et decode a message for counter chat control UE 🇪🇺
+provide a program to use to encrypt et decode a message for counter chat control EU 🇪🇺
 
 # FileCrypto (AES-256)
 
