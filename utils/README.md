@@ -32,6 +32,9 @@ no telemetry — everything happens on your machine.
 
 ## Quick start
 
+Don't forget to install wsl if you are on windows, here is a guide if you want:
+(https://gist.github.com/Paradoxdruid/2191966a0c22599d8d051aea476d28bc)
+
 ```bash
 git clone https://github.com/<your-username>/<your-repo>.git
 cd <your-repo>
