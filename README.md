@@ -21,7 +21,7 @@ A small, fully offline desktop app to encrypt and decrypt text messages using **
 - **PBKDF2HMAC key derivation:** (600,000 iterations) makes brute-forcing computationally infeasible.
 - **Dynamic security:** Fresh random salt and nonce on every run. Encrypting the exact same text twice produces completely different outputs.
 - **Graphical Interface (GUI):** Simple, responsive dark-themed window with zero hidden controls.
-- **CLI / File-based Processing:** Native compatibility with raw `.txt` file processing (`MODE:` / `CLE:` / `MESSAGE:` format).
+- **CLI / File-based Processing:** Native compatibility with raw `.txt` file processing (`MODE:` / `KEY:` / `MESSAGE:` format).
 - **Standalone executable:** Can be compiled into a portable single-file application.
 
 ## Project Structure
@@ -30,9 +30,9 @@ A small, fully offline desktop app to encrypt and decrypt text messages using **
 
 .
 ├── prim v1/
-│   ├── README.md
+│   ├── README.md          # Dedicated documentation for using it
 │   ├── script.py          # Standalone CLI / text-file script
-│   └── secret.txt
+│   └── secret.txt         # Text to encode / decode
 ├── utils/
 │   ├── Makefile           # Automation shortcuts (install / run / build)
 │   ├── README.md          # Dedicated documentation for the CLI tool
