@@ -7,14 +7,14 @@ Create a text file structured as follows:
 
 ```
 MODE: true
-CLE: YourUniqueSeedOrPassword
+KEY: YourUniqueSeedOrPassword
 MESSAGE:
 Write your confidential message here...
 ```
 
 * MODE: true -> Set to encrypt the text.
 * MODE: false -> Set to decrypt the text.
-* CLE: Your secret key/seed (shared only between you and the recipient).
+* KEY: Your secret key/seed (shared only between you and the recipient).
 * MESSAGE: The payload to process.
 
 2. Run the Script
